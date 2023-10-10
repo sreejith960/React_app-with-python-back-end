@@ -1,10 +1,14 @@
 from rest_framework.routers import DefaultRouter
 from .views import ItemViewSet
 from django.urls import path,include
+# from api.urls import post_router
 
-router = DefaultRouter()
-router.register(r'items', ItemViewSet)
+post_router = DefaultRouter()
+post_router.register(r'api',ItemViewSet)
 
-urlpatterns = [
-    path('api/', include(router.urls)),
-]
+# urlpatterns = [
+#     path('api/', include(router.urls)),
+# ]
+
+
+
